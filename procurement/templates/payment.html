@@ -2,24 +2,33 @@
 
 {% block content %}
 
-<h1> Ask for invoice </h1>
+
 {% for m in messages %}
   {{m}}
 {% endfor %}
-<form method="post">
 
-  <label for="via"> Through:</label>
 
-  <select name="via" id="via">
-    <option value="AS4">AS4 Direct</option>
-    <option value="peppol">Peppol</option>
-  </select>
+  <h1 style="text-align:left;float:left;">E-procurement website's information</h1>
+  <h2 style="text-align:right;float:right;color:blue;">Verified User <i class="fas fa-check"></i></h2>
+  <hr style="clear:both;"/>
 
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button class="btn btn-success">Send</button>
-
-</form>
-
+  <table style="width:100%">
+    <tr>
+      <th>Userame: </th>
+      <td>e-procurement</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td>info@procurement.org</td>
+    </tr>
+    <tr>
+      <th>Web ID:</th>
+      <td>https://demo-pondersource-net.herokuapp.com/e-procurement</td>
+    </tr>
+    <tr>
+      <th>Peppol ID:</th>
+      <td>zGWWzIbkhFoCXVompg36</td>
+    </tr>
+  </table>
 
 {% endblock content %}

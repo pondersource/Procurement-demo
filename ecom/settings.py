@@ -9,6 +9,7 @@ ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DISABLE_COLLECTSTATIC=1
 DATABASE_URL = os.environ.get('DATABASE_URL')
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
