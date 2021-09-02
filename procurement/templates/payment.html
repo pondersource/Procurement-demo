@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h1> Ask for invoice </h1>
+{% for m in messages %}
+  {{m}}
+{% endfor %}
+<form method="post">
+
+  <label for="via"> Through:</label>
+
+  <select name="via" id="via">
+    <option value="AS4">AS4 Direct</option>
+    <option value="peppol">Peppol</option>
+  </select>
+
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button class="btn btn-success">Send</button>
+
+</form>
+
+
+{% endblock content %}
